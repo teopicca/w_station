@@ -21,7 +21,7 @@ sensor_bmp = BMP085.BMP085()
 
 GPIO.setmode(GPIO.BOARD)
 
-DHT22_GPIO = 23
+DHT22_GPIO = 16
 
 
 
