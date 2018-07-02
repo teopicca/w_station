@@ -201,7 +201,7 @@ def lcd():
             live_data = [temp, press, hum]
             out = {'name': 'live_data', 'values':live_data}
             
-            r = requests.post("http://www.piccaw_station.duckdns.org:5000", data = out)
+            r = requests.post("http://www.piccawstation.duckdns.org:5000", data = out)
             
 
 
