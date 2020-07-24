@@ -30,16 +30,10 @@ def save_data(value, name):
     date_format = year+'/'+month+'/'+day+" "+hour+':'+minute
     print date_format
     
-
- 
     dict = {"name":name, "value" : value, "date":date_format}
   
-    
-   
     try:
-        
         r = requests.post("http://192.168.0.6:5000", data = dict)
-
     except:
         
         pass
@@ -52,14 +46,8 @@ def save_data(value, name):
         
 def job():
     
-    
     a = bmp()
     b = DHT22()
-    
-    
-            #########################################################################
-            # QUI ANDRANNO MESSE TUTTE LE INIZIALIZZAZIONI DELLE CLASSI DEI SENSORI#
-            #########################################################################
     
     t_value = a.temperature('c')
     p_value = a.pressure('atm')
@@ -155,24 +143,12 @@ def lcd():
            
     display()
     
-
     while True:
 
         t_p = bmp()
         h = DHT22()
-
-        
-        
         c = check()
-        
-        
-        
-        
                     
-          #  
-            
-            
-            
         if c == 10:
             lcd.lcd_display_string('no sensor', 1)
             lcd.lcd_display_string('no sensor', 2)
@@ -219,17 +195,10 @@ def wind():
         lcd.lcd_display_string(v_w, 4,8)
         
         time.sleep(1)
-    
 
-
-
-
-
-        
 if __name__ == '__main__':
     
     loading()
-    
     
     try:
         
@@ -241,7 +210,6 @@ if __name__ == '__main__':
         LCD.start()
         WIND.start()
         SCHEDULER.start()
-        
         
     except:
         pass

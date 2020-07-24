@@ -29,8 +29,6 @@ DHT22_GPIO = 16
 class bmp(): #defing class that it will be used for the temperature misered by the BMP180 sensor
 
    
-          
-   
     def temperature(self, misure_unity):
         
         if misure_unity == 'c':

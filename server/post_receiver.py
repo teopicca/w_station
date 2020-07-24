@@ -7,9 +7,7 @@ Created on Wed Oct 18 20:49:53 2017
 
 from flask import Flask, request, Response
 
-
 index = ['date','value']
-
 
 def csv_index(name):
     
@@ -37,9 +35,6 @@ def csv_data(data, name):
         f.truncate()
         f.write('\n')
         #
-#csv_index('temperature')
-#csv_index('pressure')
-#csv_index('humidity')
 
 app = Flask(__name__)
 @app.route("/", methods=['POST'])
@@ -75,11 +70,6 @@ def get_data():
            
            f.write(out)
         
-        
-       
-       
-       
-      
         
     return Response(receiver())
     
